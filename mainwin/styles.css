@@ -1,0 +1,272 @@
+/* Some keyframe stuff */
+@keyframes rgb-light {
+    0% {
+        background-color: #ff0000; /* red */
+    }
+    33% {
+        background-color: #00ff00; /* green */
+    }
+    66% {
+        background-color: #0000ff; /* blue */
+    }
+    100% {
+        background-color: #ff0000; /* red */
+    }
+}
+
+@keyframes rgbx-text {
+    0% {
+        color: #ff0000; /* red */
+    }
+    33% {
+        color: #00ff00; /* green */
+    }
+    66% {
+        color: #0000ff; /* blue */
+    }
+    100% {
+        color: #ff0000; /* red */
+    }
+}
+
+@keyframes rgb-text {
+    0% {
+        color: crimson; /* red */
+    }
+    33% {
+        color: darkcyan; /* green */
+    }
+    66% {
+        color: crimson; /* blue */
+    }
+    100% {
+        color: darkcyan; /* red */
+    }
+}
+
+@keyframes rgb-border {
+    0% {
+        border-color: crimson; /* red */
+    }
+    33% {
+        border-color: darkcyan; /* green */
+    }
+    66% {
+        border-color: crimson; /* blue */
+    }
+    100% {
+        border-color: darkcyan; /* red */
+    }
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+body {
+    background: #282828;
+    color: white;
+}
+
+button {
+    color: white;
+    width: 250px;
+    max-width: 450px;
+    height: 50px;
+    background: #3c3b3b;
+    font-size: 32px;
+    border: none;
+    margin: 10px;
+    box-shadow: -5px -5px white;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 5px 5px white;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+button:focus {
+    box-shadow: 5px 5px crimson;
+        outline: none;
+    border: none;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+button:active {
+    box-shadow: 12px 12px crimson;
+    background: darkcyan;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+    
+}
+
+/* The styles for the disabled items*/
+button:disabled {
+    color: white;
+    width: 250px;
+    height: 50px;
+    max-width: 450px;
+    background: #3c3b3b;
+    font-size: 32px;
+    border: none;
+    margin: 10px;
+    box-shadow: -5px -5px #7c7c7c;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+button:hover:disabled {
+    color: white;
+    width: 250px;
+    height: 50px;
+    max-width: 450px;
+    background: #3c3b3b;
+    font-size: 32px;
+    border: none;
+    margin: 10px;
+    box-shadow: -5px -5px #7c7c7c;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+    cursor: not-allowed;
+}
+
+button:focus:disabled {
+    color: white;
+    width: 250px;
+    height: 50px;
+    max-width: 450px;
+    background: #3c3b3b;
+    font-size: 32px;
+    border: none;
+    margin: 10px;
+    box-shadow: -5px -5px #7c7c7c;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+button:active:disabled {
+    box-shadow: -5px -5px #7c7c7c;
+    background: crimson;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+    
+}
+
+h1 {
+    color: lightyellow;
+    animation: rgb-text 30s ease-in-out infinite;
+}
+.header {
+    display: flex; /* Make the buttons flex items */
+    flex-wrap: nowrap; /* Prevent the buttons from wrapping to a new line */
+    overflow-x: auto; /* Add a horizontal scrollbar to the div */
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+a {
+    animation: rgb-text 30s ease-in-out infinite;
+}
+
+a:hover {
+    animation: rgbx-text 1s ease-in-out infinite;
+}
+
+.overlay-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    display: none;
+}
+
+.contentWarning {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #282828;
+    padding: 20px;
+    border: solid 2px crimson;
+    animation: rgb-border 30s ease-in-out infinite;
+    z-index: 1000;
+    display: none;
+    text-align: center;
+}
+
+.contentwarning h2 {
+    margin: 5% 5%;
+}
+
+#wcbtncontainer {
+    display: inline;
+}
+
+
+
+img {
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#ttsAlert {
+    display: block !read-only;
+    position: absolute !read-only;
+    left: -9999px !read-only;
+    width: 1px !read-only;
+    height: 1px !read-only;
+    overflow: hidden !read-only;
+}
+
+textarea {
+    color: white;
+    width: 525px;
+    height: 400px;
+    background: #3c3b3b;
+    font-size: 16px;
+    border: none;
+    margin: 10px;
+    box-shadow: -5px -5px white;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+textarea:hover {
+    box-shadow: 5px 5px white;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+textarea:focus {
+    box-shadow: 5px 5px crimson;
+        outline: none;
+    border: none;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+textarea:active {
+    box-shadow: 12px 12px crimson;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+    
+}
