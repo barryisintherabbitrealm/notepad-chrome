@@ -1,6 +1,11 @@
+let sf = "";
+
 // Define all of the functions that the prgram uses.
 function saveFile(){
-    fname = prompt("Enter a file name");
+    fname = prompt("Enter a file name", sf);
+    if(fname !== null){
+        sf = fname;
+    }
     if(fname !== null){
         const textarea = document.querySelector('#writerArea');
         const textToSave = textarea.value;
