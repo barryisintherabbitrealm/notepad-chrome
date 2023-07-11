@@ -76,3 +76,32 @@ document.querySelector("#quitBtn").addEventListener("click", function(){
     quitApp();
 });
 
+
+// ŋ ꝥ Ꝥ þ Þ
+
+// Add the buttons for the special characters
+document.querySelector("#ŋins").addEventListener("click", function(){
+    document.querySelector("#writerArea").value = document.querySelector("#writerArea").value + "ŋ";
+    document.querySelector("#writerArea").focus();
+});
+
+document.querySelector("#ꝥins").addEventListener("click", function(){
+    document.querySelector("#writerArea").value = document.querySelector("#writerArea").value + "ꝥ";
+    document.querySelector("#writerArea").focus();
+});
+
+document.querySelector("#Ꝥins").addEventListener("click", function(){
+    document.querySelector("#writerArea").value = document.querySelector("#writerArea").value + "Ꝥ";
+    document.querySelector("#writerArea").focus();
+});
+
+document.querySelector("#þins").addEventListener("click", function(){
+    document.querySelector("#writerArea").value = document.querySelector("#writerArea").value + "þ";
+    document.querySelector("#writerArea").focus();
+});
+
+document.querySelector("#Þins").addEventListener("click", function(){
+    document.querySelector("#writerArea").value = document.querySelector("#writerArea").value + "Þ";
+    document.querySelector("#writerArea").focus();
+});
+
